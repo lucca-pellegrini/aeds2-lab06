@@ -25,7 +25,7 @@ def plot_data(data, title, filename):
             x='num',
             y=data['time'] / 1e9,
             hue='strat',
-            s=1,  # Set marker size to 1
+            s=0.5,  # Set marker size to 1
             ax=ax,
             edgecolor='none'  # Remove edge color
         )
