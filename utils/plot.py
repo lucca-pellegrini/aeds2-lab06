@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -24,12 +26,12 @@ def plot_data(data, title, filename, yscale):
         linewidth=1,
     )
     plt.title(title)
-    plt.xlabel('Array Size (num)')
-    plt.ylabel('Execution Time (s)')  # Update the label to indicate seconds
-    plt.legend(title='Pivot Strategy')
+    plt.xlabel('Tamanho do Arranjo (num)')
+    plt.ylabel('Tempo de Execução (s)')
+    plt.legend(title='Pivô')
     plt.yscale(yscale)  # Set the y-axis scale
     plt.tight_layout()
-    plt.savefig(filename, dpi=600, format='svg')
+    plt.savefig(filename, dpi=900, format='svg')
     # plt.show()
 
 
@@ -37,7 +39,7 @@ def plot_all_data(data, yscale):
     vector_types = data['type'].unique()
     for vector_type in vector_types:
         subset = data[data['type'] == vector_type]
-        title = f'Performance of Quicksort Strategies for {vector_type} Vectors ({yscale.capitalize()} Scale)'
+        title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type} (Escala {yscale.capitalize()})'
         filename = f'build/fig/{vector_type}_all_data_{yscale}.svg'
         plot_data(subset, title, filename, yscale)
 
@@ -47,7 +49,7 @@ def plot_specific_sizes(data, sizes, yscale):
     vector_types = filtered_data['type'].unique()
     for vector_type in vector_types:
         subset = filtered_data[filtered_data['type'] == vector_type]
-        title = f'Performance of Quicksort Strategies for {vector_type} Vectors (Specific Sizes, {yscale.capitalize()} Scale)'
+        title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type} (Pontos Selecionados, Escala {yscale.capitalize()})'
         filename = f'build/fig/{vector_type}_specific_sizes_{yscale}.svg'
         plot_data(subset, title, filename, yscale)
 
