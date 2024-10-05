@@ -15,26 +15,29 @@ def setup_plot_style():
 
 
 def plot_data(data, title, filename):
-    fig, axes = plt.subplots(1, 2, figsize=(20, 6))
+    data = data[data['num'] >= 100]
+
+    fig, axes = plt.subplots(1, 2, figsize=(15, 6))
 
     for ax, yscale in zip(axes, ['linear', 'log']):
-        sns.lineplot(
+        sns.scatterplot(
             data=data,
             x='num',
-            y=data['time'] / 1e1,
+            y=data['time'] / 1e9,
             hue='strat',
-            marker='',
-            linewidth=1,
+            s=1,  # Set marker size to 1
             ax=ax,
+            edgecolor='none'  # Remove edge color
         )
         ax.set_title(f'Escala {yscale.capitalize()}')
         ax.set_xlabel('Tamanho do Arranjo (num)')
-        ax.set_ylabel('Tempo de Execução (ns)')
+        ax.set_ylabel('Tempo de Execução (s)')
         ax.set_yscale(yscale)
-        ax.legend(title='Pivô')
+        handles, labels = ax.get_legend_handles_labels()
+        ax.legend(handles=handles, labels=labels, title='Pivô', markerscale=10)
 
     fig.suptitle(title, fontsize=16)
-    plt.tight_layout(rect=(0, 0, 1, 0.95))
+    plt.tight_layout(rect=(0, 0, 1, 0.95))  # Use a tuple instead of a list
     plt.savefig(filename, dpi=900, format='svg')
     # plt.show()
 
