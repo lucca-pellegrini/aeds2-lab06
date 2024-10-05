@@ -15,6 +15,7 @@
 #define UTIL_H
 
 #include <errno.h>
+#include <stdio.h>
 
 /**
  * @brief Macro para verificação de erros e redirecionamento de fluxo.
@@ -39,5 +40,8 @@
 			goto label;                                    \
 		}                                                      \
 	} while (0)
+
+
+void swap(int *arr, size_t a, size_t b);
 
 #endif // !UTIL_H

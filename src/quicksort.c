@@ -4,6 +4,7 @@
 #include <time.h>
 
 #include "quicksort.h"
+#include "util.h"
 
 typedef size_t pivot_func_t(int *, size_t, size_t);
 
@@ -13,7 +14,6 @@ static size_t pivot_first(int *vec, size_t esq, size_t dir);
 static size_t pivot_last(int *vec, size_t esq, size_t dir);
 static size_t pivot_rand(int *vec, size_t esq, size_t dir);
 static size_t pivot_median(int *vec, size_t esq, size_t dir);
-static inline void swap(int *vec, size_t a, size_t b);
 
 static bool rand_is_seeded = false;
 
@@ -111,13 +111,6 @@ static size_t pivot_median(int *restrict vec, size_t esq, size_t dir)
 		swap(vec, mid, dir);
 
 	return mid;
-}
-
-static inline void swap(int *vec, size_t a, size_t b)
-{
-	int temp = vec[a];
-	vec[a] = vec[b];
-	vec[b] = temp;
 }
 
 void quicksort_pivot_first(int *vec, size_t n)
