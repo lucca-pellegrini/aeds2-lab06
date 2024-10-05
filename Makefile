@@ -112,6 +112,7 @@ $(CC_JSON): Makefile | $(OUT_DIR)/
 clean:
 	$(RM) $(BIN) $(OBJ) $(CC_JSON)
 	$(RMDIR) $(OUT_DIR)
+	$(MAKE) -C report clean
 
 # Como criar o executável distributível.
 release: $(BIN)-release docs
@@ -139,8 +140,11 @@ csv: $(CSV)
 $(FIG_DIR)/%.pdf: $(CSV) utils/plot.py | $(FIG_DIR)/
 	python utils/plot.py
 
+$(FIG_DIR)/%.tex: $(CSV) utils/tables.py | $(FIG_DIR)/
+	python utils/tables.py
+
 # Como salvar o relatório.
-report/main.pdf: $(CSV) $(FIG_DIR)/*.pdf report/*.tex
+report/main.pdf: $(CSV) $(TBL) $(FIG_DIR)/*.pdf $(FIG_DIR)/*.tex report/*.tex
 	$(MAKE) -C report
 
 report: report/main.pdf

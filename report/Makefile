@@ -5,7 +5,7 @@ ETC        = Makefile
 FIG        = ../build/fig/*
 VER        = $(shell git describe --long --tags \
               | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g')
-LATEX      = lualatex
+LATEX      = pdflatex
 LATEXFLAGS = -halt-on-error -interaction=batchmode -shell-escape
 RELEASE    = $(NAME)_$(VER)
 

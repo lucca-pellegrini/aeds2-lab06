@@ -47,7 +47,7 @@ def plot_all_data(data):
     vector_types = data['type'].unique()
     for vector_type in vector_types:
         subset = data[data['type'] == vector_type]
-        title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type}'
+        title = f'Desempenho das Estratégias de Escolha de Pivô com Vetores {vector_type}'
         filename = f'build/fig/{vector_type}_all_data.pdf'
         plot_data(subset, title, filename)
 
@@ -57,7 +57,7 @@ def plot_specific_sizes(data, sizes):
     vector_types = filtered_data['type'].unique()
     for vector_type in vector_types:
         subset = filtered_data[filtered_data['type'] == vector_type]
-        title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type} (Pontos Selecionados)'
+        title = f'Desempenho das Estratégias de Escolha de Pivô com Vetores {vector_type} (Pontos Selecionados)'
         filename = f'build/fig/{vector_type}_specific_sizes.pdf'
         plot_data(subset, title, filename)
 
