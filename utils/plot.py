@@ -23,7 +23,7 @@ def plot_data(data, title, filename):
         sns.scatterplot(
             data=data,
             x='num',
-            y=data['time'] / 1e9,
+            y=data['time'] / 1e1,
             hue='strat',
             s=0.5,  # Set marker size to 1
             ax=ax,
@@ -31,7 +31,7 @@ def plot_data(data, title, filename):
         )
         ax.set_title(f'Escala {yscale.capitalize()}')
         ax.set_xlabel('Tamanho do Arranjo (num)')
-        ax.set_ylabel('Tempo de Execução (s)')
+        ax.set_ylabel('Tempo de Execução (ns)')
         ax.set_yscale(yscale)
         handles, labels = ax.get_legend_handles_labels()
         ax.legend(handles=handles, labels=labels, title='Pivô', markerscale=10)
