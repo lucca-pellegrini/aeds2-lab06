@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AEDs II - Laboratório 6: Código-Fonte de include/vec.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js", "TeX/AMSmath.js.js", "TeX/AMSsymbols.js.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AEDs II - Laboratório 6
+   </div>
+   <div id="projectbrief">Implementação do QuickSort com Variação na Escolha do Pivô</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('vec_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">vec.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="vec_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="structVec.html">    5</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structVec.html">Vec</a> {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="structVec.html#aeb7fc0ea0c767d817e2d82d72a6fdbe9">    6</a></span>        <span class="keywordtype">int</span> *<a class="code hl_variable" href="structVec.html#aeb7fc0ea0c767d817e2d82d72a6fdbe9">arr</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="structVec.html#a6dff4cef2ef4c8353e1a3de61a8d0938">    7</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structVec.html#a6dff4cef2ef4c8353e1a3de61a8d0938">n</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structVec.html#a98f6dd479a52777da5711ee23359688d">    8</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structVec.html#a98f6dd479a52777da5711ee23359688d">cap</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="vec_8h.html#a8c932dfae6946209206d02b5136c215e">    9</a></span>} <a class="code hl_typedef" href="vec_8h.html#a8c932dfae6946209206d02b5136c215e">Vec</a>;</div>
+</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">   11</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191">   12</a></span>        <a class="code hl_enumvalue" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191">VEC_ORDERED</a>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680">   13</a></span>        <a class="code hl_enumvalue" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680">VEC_REVERSE</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384">   14</a></span>        <a class="code hl_enumvalue" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384">VEC_PARTIAL_ORDERED</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_enumvalue" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4">VEC_RAND</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4">   16</a></span>} <a class="code hl_enumeration" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a>;</div>
+</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="vec_8h.html#aedf6c1537b8423c15494f26ee149d0c1">vec</a>(<a class="code hl_struct" href="structVec.html">Vec</a> *restrict v, <span class="keywordtype">size_t</span> n, <a class="code hl_enumeration" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a> t);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="vec_8h.html#a93d1e612103c8ead56959492bb6c8668">vec_ordered</a>(<a class="code hl_struct" href="structVec.html">Vec</a> *restrict v, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="vec_8h.html#aca714db87540c6a99f66abf07687111d">vec_reverse</a>(<a class="code hl_struct" href="structVec.html">Vec</a> *restrict v, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="vec_8h.html#ac96ad3d5af17a3031f9c25b34e64a36d">vec_partial_ordered</a>(<a class="code hl_struct" href="structVec.html">Vec</a> *restrict v, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="vec_8h.html#a8cfaa73b8f87e51074b38941f6e2eb75">vec_rand</a>(<a class="code hl_struct" href="structVec.html">Vec</a> *restrict v, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><a class="code hl_struct" href="structVec.html">Vec</a> <a class="code hl_function" href="vec_8h.html#a51a53b948156e58a69fa6a7c74dac6ff">vec_new</a>(<span class="keywordtype">size_t</span> cap);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="vec_8h.html#a35b616354c1fe8957ef621fd1d4aea79">vec_copy</a>(<a class="code hl_struct" href="structVec.html">Vec</a> *restrict dst, <a class="code hl_struct" href="structVec.html">Vec</a> src);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="vec_8h.html#a5c0c980c643803ae6ba05066914187b4">vec_free</a>(<a class="code hl_struct" href="structVec.html">Vec</a> <a class="code hl_function" href="vec_8h.html#aedf6c1537b8423c15494f26ee149d0c1">vec</a>);</div>
+<div class="ttc" id="astructVec_html"><div class="ttname"><a href="structVec.html">Vec</a></div><div class="ttdef"><b>Definição</b> vec.h:5</div></div>
+<div class="ttc" id="astructVec_html_a6dff4cef2ef4c8353e1a3de61a8d0938"><div class="ttname"><a href="structVec.html#a6dff4cef2ef4c8353e1a3de61a8d0938">Vec::n</a></div><div class="ttdeci">size_t n</div><div class="ttdef"><b>Definição</b> vec.h:7</div></div>
+<div class="ttc" id="astructVec_html_a98f6dd479a52777da5711ee23359688d"><div class="ttname"><a href="structVec.html#a98f6dd479a52777da5711ee23359688d">Vec::cap</a></div><div class="ttdeci">size_t cap</div><div class="ttdef"><b>Definição</b> vec.h:8</div></div>
+<div class="ttc" id="astructVec_html_aeb7fc0ea0c767d817e2d82d72a6fdbe9"><div class="ttname"><a href="structVec.html#aeb7fc0ea0c767d817e2d82d72a6fdbe9">Vec::arr</a></div><div class="ttdeci">int * arr</div><div class="ttdef"><b>Definição</b> vec.h:6</div></div>
+<div class="ttc" id="avec_8h_html_a35b616354c1fe8957ef621fd1d4aea79"><div class="ttname"><a href="vec_8h.html#a35b616354c1fe8957ef621fd1d4aea79">vec_copy</a></div><div class="ttdeci">void vec_copy(Vec *restrict dst, Vec src)</div><div class="ttdef"><b>Definição</b> vec.c:86</div></div>
+<div class="ttc" id="avec_8h_html_a51a53b948156e58a69fa6a7c74dac6ff"><div class="ttname"><a href="vec_8h.html#a51a53b948156e58a69fa6a7c74dac6ff">vec_new</a></div><div class="ttdeci">Vec vec_new(size_t cap)</div><div class="ttdef"><b>Definição</b> vec.c:75</div></div>
+<div class="ttc" id="avec_8h_html_a5c0c980c643803ae6ba05066914187b4"><div class="ttname"><a href="vec_8h.html#a5c0c980c643803ae6ba05066914187b4">vec_free</a></div><div class="ttdeci">void vec_free(Vec vec)</div><div class="ttdef"><b>Definição</b> vec.c:96</div></div>
+<div class="ttc" id="avec_8h_html_a8c932dfae6946209206d02b5136c215e"><div class="ttname"><a href="vec_8h.html#a8c932dfae6946209206d02b5136c215e">Vec</a></div><div class="ttdeci">struct Vec Vec</div></div>
+<div class="ttc" id="avec_8h_html_a8cfaa73b8f87e51074b38941f6e2eb75"><div class="ttname"><a href="vec_8h.html#a8cfaa73b8f87e51074b38941f6e2eb75">vec_rand</a></div><div class="ttdeci">void vec_rand(Vec *restrict v, size_t n)</div><div class="ttdef"><b>Definição</b> vec.c:63</div></div>
+<div class="ttc" id="avec_8h_html_a93d1e612103c8ead56959492bb6c8668"><div class="ttname"><a href="vec_8h.html#a93d1e612103c8ead56959492bb6c8668">vec_ordered</a></div><div class="ttdeci">void vec_ordered(Vec *restrict v, size_t n)</div><div class="ttdef"><b>Definição</b> vec.c:29</div></div>
+<div class="ttc" id="avec_8h_html_ac96ad3d5af17a3031f9c25b34e64a36d"><div class="ttname"><a href="vec_8h.html#ac96ad3d5af17a3031f9c25b34e64a36d">vec_partial_ordered</a></div><div class="ttdeci">void vec_partial_ordered(Vec *restrict v, size_t n)</div><div class="ttdef"><b>Definição</b> vec.c:47</div></div>
+<div class="ttc" id="avec_8h_html_aca714db87540c6a99f66abf07687111d"><div class="ttname"><a href="vec_8h.html#aca714db87540c6a99f66abf07687111d">vec_reverse</a></div><div class="ttdeci">void vec_reverse(Vec *restrict v, size_t n)</div><div class="ttdef"><b>Definição</b> vec.c:38</div></div>
+<div class="ttc" id="avec_8h_html_ae93f92d10730a52ed3b207d5811f6a6e"><div class="ttname"><a href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a></div><div class="ttdeci">VecType</div><div class="ttdef"><b>Definição</b> vec.h:11</div></div>
+<div class="ttc" id="avec_8h_html_ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191"><div class="ttname"><a href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191">VEC_ORDERED</a></div><div class="ttdeci">@ VEC_ORDERED</div><div class="ttdef"><b>Definição</b> vec.h:12</div></div>
+<div class="ttc" id="avec_8h_html_ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384"><div class="ttname"><a href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384">VEC_PARTIAL_ORDERED</a></div><div class="ttdeci">@ VEC_PARTIAL_ORDERED</div><div class="ttdef"><b>Definição</b> vec.h:14</div></div>
+<div class="ttc" id="avec_8h_html_ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4"><div class="ttname"><a href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4">VEC_RAND</a></div><div class="ttdeci">@ VEC_RAND</div><div class="ttdef"><b>Definição</b> vec.h:15</div></div>
+<div class="ttc" id="avec_8h_html_ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680"><div class="ttname"><a href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680">VEC_REVERSE</a></div><div class="ttdeci">@ VEC_REVERSE</div><div class="ttdef"><b>Definição</b> vec.h:13</div></div>
+<div class="ttc" id="avec_8h_html_aedf6c1537b8423c15494f26ee149d0c1"><div class="ttname"><a href="vec_8h.html#aedf6c1537b8423c15494f26ee149d0c1">vec</a></div><div class="ttdeci">void vec(Vec *restrict v, size_t n, VecType t)</div><div class="ttdef"><b>Definição</b> vec.c:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="vec_8h.html">vec.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

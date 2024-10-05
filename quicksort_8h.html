@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AEDs II - Laboratório 6: Referência ao ficheiro include/quicksort.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js", "TeX/AMSmath.js.js", "TeX/AMSsymbols.js.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AEDs II - Laboratório 6
+   </div>
+   <div id="projectbrief">Implementação do QuickSort com Variação na Escolha do Pivô</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('quicksort_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Definições de tipos</a> &#124;
+<a href="#enum-members">Enumerações</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência ao ficheiro quicksort.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+</div>
+<p><a href="quicksort_8h_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Definições de tipos</h2></td></tr>
+<tr class="memitem:a06cb5b6cd2051ddab0936e30edf44525" id="r_a06cb5b6cd2051ddab0936e30edf44525"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06cb5b6cd2051ddab0936e30edf44525">PivotStrategy</a></td></tr>
+<tr class="separator:a06cb5b6cd2051ddab0936e30edf44525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a795621704f7a72cc4639b0e9c2e95328" id="r_a795621704f7a72cc4639b0e9c2e95328"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a795621704f7a72cc4639b0e9c2e95328">sort_func_t</a>(int *, size_t)</td></tr>
+<tr class="separator:a795621704f7a72cc4639b0e9c2e95328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerações</h2></td></tr>
+<tr class="memitem:a001800b53b776b368a84dc646ee6499d" id="r_a001800b53b776b368a84dc646ee6499d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a> { <a class="el" href="#a001800b53b776b368a84dc646ee6499dacc7bb67d1437c1c948ebff80f5f300d2">PIVOT_FIRST</a>
+, <a class="el" href="#a001800b53b776b368a84dc646ee6499da9ef3aadae857cece6b78f984f57dd75f">PIVOT_LAST</a>
+, <a class="el" href="#a001800b53b776b368a84dc646ee6499dace0f24b68f0e1baf16784d5e271b27c9">PIVOT_RAND</a>
+, <a class="el" href="#a001800b53b776b368a84dc646ee6499da5278e6a9e80f11ba31e46dd0e67de9c2">PIVOT_MEDIAN</a>
+ }</td></tr>
+<tr class="separator:a001800b53b776b368a84dc646ee6499d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a0ad5ffc777607448d652cf3a9ff26a37" id="r_a0ad5ffc777607448d652cf3a9ff26a37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ad5ffc777607448d652cf3a9ff26a37">quicksort</a> (int *<a class="el" href="vec_8c.html#aedf6c1537b8423c15494f26ee149d0c1">vec</a>, size_t n, enum <a class="el" href="#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a> strat)</td></tr>
+<tr class="separator:a0ad5ffc777607448d652cf3a9ff26a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7a6d6a10f058b79846635350caa433" id="r_a1f7a6d6a10f058b79846635350caa433"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f7a6d6a10f058b79846635350caa433">quicksort_pivot_first</a> (int *<a class="el" href="vec_8c.html#aedf6c1537b8423c15494f26ee149d0c1">vec</a>, size_t n)</td></tr>
+<tr class="separator:a1f7a6d6a10f058b79846635350caa433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdf732ec15baee23a552817e64b93d2e" id="r_acdf732ec15baee23a552817e64b93d2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdf732ec15baee23a552817e64b93d2e">quicksort_pivot_last</a> (int *<a class="el" href="vec_8c.html#aedf6c1537b8423c15494f26ee149d0c1">vec</a>, size_t n)</td></tr>
+<tr class="separator:acdf732ec15baee23a552817e64b93d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd79776dd7bd8f0a38199c2c8edabd2" id="r_a8dd79776dd7bd8f0a38199c2c8edabd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dd79776dd7bd8f0a38199c2c8edabd2">quicksort_pivot_rand</a> (int *<a class="el" href="vec_8c.html#aedf6c1537b8423c15494f26ee149d0c1">vec</a>, size_t n)</td></tr>
+<tr class="separator:a8dd79776dd7bd8f0a38199c2c8edabd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5190e6af93a17d2abcd978fbf5ed82" id="r_a6e5190e6af93a17d2abcd978fbf5ed82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e5190e6af93a17d2abcd978fbf5ed82">quicksort_pivot_median</a> (int *<a class="el" href="vec_8c.html#aedf6c1537b8423c15494f26ee149d0c1">vec</a>, size_t n)</td></tr>
+<tr class="separator:a6e5190e6af93a17d2abcd978fbf5ed82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação dos tipos</h2>
+<a id="a06cb5b6cd2051ddab0936e30edf44525" name="a06cb5b6cd2051ddab0936e30edf44525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06cb5b6cd2051ddab0936e30edf44525">&#9670;&#160;</a></span>PivotStrategy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a> <a class="el" href="#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a795621704f7a72cc4639b0e9c2e95328" name="a795621704f7a72cc4639b0e9c2e95328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a795621704f7a72cc4639b0e9c2e95328">&#9670;&#160;</a></span>sort_func_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void sort_func_t(int *, size_t)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos valores da enumeração</h2>
+<a id="a001800b53b776b368a84dc646ee6499d" name="a001800b53b776b368a84dc646ee6499d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001800b53b776b368a84dc646ee6499d">&#9670;&#160;</a></span>PivotStrategy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumerações</th></tr><tr><td class="fieldname"><a id="a001800b53b776b368a84dc646ee6499dacc7bb67d1437c1c948ebff80f5f300d2" name="a001800b53b776b368a84dc646ee6499dacc7bb67d1437c1c948ebff80f5f300d2"></a>PIVOT_FIRST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a001800b53b776b368a84dc646ee6499da9ef3aadae857cece6b78f984f57dd75f" name="a001800b53b776b368a84dc646ee6499da9ef3aadae857cece6b78f984f57dd75f"></a>PIVOT_LAST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a001800b53b776b368a84dc646ee6499dace0f24b68f0e1baf16784d5e271b27c9" name="a001800b53b776b368a84dc646ee6499dace0f24b68f0e1baf16784d5e271b27c9"></a>PIVOT_RAND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a001800b53b776b368a84dc646ee6499da5278e6a9e80f11ba31e46dd0e67de9c2" name="a001800b53b776b368a84dc646ee6499da5278e6a9e80f11ba31e46dd0e67de9c2"></a>PIVOT_MEDIAN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="a0ad5ffc777607448d652cf3a9ff26a37" name="a0ad5ffc777607448d652cf3a9ff26a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad5ffc777607448d652cf3a9ff26a37">&#9670;&#160;</a></span>quicksort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void quicksort </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>vec</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a></td>          <td class="paramname"><span class="paramname"><em>strat</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f7a6d6a10f058b79846635350caa433" name="a1f7a6d6a10f058b79846635350caa433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7a6d6a10f058b79846635350caa433">&#9670;&#160;</a></span>quicksort_pivot_first()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void quicksort_pivot_first </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>vec</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdf732ec15baee23a552817e64b93d2e" name="acdf732ec15baee23a552817e64b93d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdf732ec15baee23a552817e64b93d2e">&#9670;&#160;</a></span>quicksort_pivot_last()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void quicksort_pivot_last </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>vec</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e5190e6af93a17d2abcd978fbf5ed82" name="a6e5190e6af93a17d2abcd978fbf5ed82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5190e6af93a17d2abcd978fbf5ed82">&#9670;&#160;</a></span>quicksort_pivot_median()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void quicksort_pivot_median </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>vec</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dd79776dd7bd8f0a38199c2c8edabd2" name="a8dd79776dd7bd8f0a38199c2c8edabd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd79776dd7bd8f0a38199c2c8edabd2">&#9670;&#160;</a></span>quicksort_pivot_rand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void quicksort_pivot_rand </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>vec</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="quicksort_8h.html">quicksort.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

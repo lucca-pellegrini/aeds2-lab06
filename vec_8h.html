@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AEDs II - Laboratório 6: Referência ao ficheiro include/vec.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js", "TeX/AMSmath.js.js", "TeX/AMSsymbols.js.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AEDs II - Laboratório 6
+   </div>
+   <div id="projectbrief">Implementação do QuickSort com Variação na Escolha do Pivô</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('vec_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#typedef-members">Definições de tipos</a> &#124;
+<a href="#enum-members">Enumerações</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência ao ficheiro vec.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+</div>
+<p><a href="vec_8h_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVec.html">Vec</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Definições de tipos</h2></td></tr>
+<tr class="memitem:a8c932dfae6946209206d02b5136c215e" id="r_a8c932dfae6946209206d02b5136c215e"><td class="memItemLeft" align="right" valign="top">typedef struct Vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c932dfae6946209206d02b5136c215e">Vec</a></td></tr>
+<tr class="separator:a8c932dfae6946209206d02b5136c215e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2d5a27edd512090bf89c51b1067200" id="r_a6f2d5a27edd512090bf89c51b1067200"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f2d5a27edd512090bf89c51b1067200">VecType</a></td></tr>
+<tr class="separator:a6f2d5a27edd512090bf89c51b1067200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerações</h2></td></tr>
+<tr class="memitem:ae93f92d10730a52ed3b207d5811f6a6e" id="r_ae93f92d10730a52ed3b207d5811f6a6e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a> { <a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191">VEC_ORDERED</a>
+, <a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680">VEC_REVERSE</a>
+, <a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384">VEC_PARTIAL_ORDERED</a>
+, <a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4">VEC_RAND</a>
+ }</td></tr>
+<tr class="separator:ae93f92d10730a52ed3b207d5811f6a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:aedf6c1537b8423c15494f26ee149d0c1" id="r_aedf6c1537b8423c15494f26ee149d0c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedf6c1537b8423c15494f26ee149d0c1">vec</a> (<a class="el" href="structVec.html">Vec</a> *restrict v, size_t n, <a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a> t)</td></tr>
+<tr class="separator:aedf6c1537b8423c15494f26ee149d0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d1e612103c8ead56959492bb6c8668" id="r_a93d1e612103c8ead56959492bb6c8668"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93d1e612103c8ead56959492bb6c8668">vec_ordered</a> (<a class="el" href="structVec.html">Vec</a> *restrict v, size_t n)</td></tr>
+<tr class="separator:a93d1e612103c8ead56959492bb6c8668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca714db87540c6a99f66abf07687111d" id="r_aca714db87540c6a99f66abf07687111d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca714db87540c6a99f66abf07687111d">vec_reverse</a> (<a class="el" href="structVec.html">Vec</a> *restrict v, size_t n)</td></tr>
+<tr class="separator:aca714db87540c6a99f66abf07687111d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96ad3d5af17a3031f9c25b34e64a36d" id="r_ac96ad3d5af17a3031f9c25b34e64a36d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac96ad3d5af17a3031f9c25b34e64a36d">vec_partial_ordered</a> (<a class="el" href="structVec.html">Vec</a> *restrict v, size_t n)</td></tr>
+<tr class="separator:ac96ad3d5af17a3031f9c25b34e64a36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cfaa73b8f87e51074b38941f6e2eb75" id="r_a8cfaa73b8f87e51074b38941f6e2eb75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cfaa73b8f87e51074b38941f6e2eb75">vec_rand</a> (<a class="el" href="structVec.html">Vec</a> *restrict v, size_t n)</td></tr>
+<tr class="separator:a8cfaa73b8f87e51074b38941f6e2eb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a53b948156e58a69fa6a7c74dac6ff" id="r_a51a53b948156e58a69fa6a7c74dac6ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVec.html">Vec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51a53b948156e58a69fa6a7c74dac6ff">vec_new</a> (size_t cap)</td></tr>
+<tr class="separator:a51a53b948156e58a69fa6a7c74dac6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b616354c1fe8957ef621fd1d4aea79" id="r_a35b616354c1fe8957ef621fd1d4aea79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35b616354c1fe8957ef621fd1d4aea79">vec_copy</a> (<a class="el" href="structVec.html">Vec</a> *restrict dst, <a class="el" href="structVec.html">Vec</a> src)</td></tr>
+<tr class="separator:a35b616354c1fe8957ef621fd1d4aea79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0c980c643803ae6ba05066914187b4" id="r_a5c0c980c643803ae6ba05066914187b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c0c980c643803ae6ba05066914187b4">vec_free</a> (<a class="el" href="structVec.html">Vec</a> <a class="el" href="vec_8c.html#aedf6c1537b8423c15494f26ee149d0c1">vec</a>)</td></tr>
+<tr class="separator:a5c0c980c643803ae6ba05066914187b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação dos tipos</h2>
+<a id="a8c932dfae6946209206d02b5136c215e" name="a8c932dfae6946209206d02b5136c215e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c932dfae6946209206d02b5136c215e">&#9670;&#160;</a></span>Vec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct Vec Vec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f2d5a27edd512090bf89c51b1067200" name="a6f2d5a27edd512090bf89c51b1067200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2d5a27edd512090bf89c51b1067200">&#9670;&#160;</a></span>VecType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a> <a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos valores da enumeração</h2>
+<a id="ae93f92d10730a52ed3b207d5811f6a6e" name="ae93f92d10730a52ed3b207d5811f6a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae93f92d10730a52ed3b207d5811f6a6e">&#9670;&#160;</a></span>VecType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumerações</th></tr><tr><td class="fieldname"><a id="ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191" name="ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191"></a>VEC_ORDERED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680" name="ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680"></a>VEC_REVERSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384" name="ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384"></a>VEC_PARTIAL_ORDERED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4" name="ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4"></a>VEC_RAND&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="aedf6c1537b8423c15494f26ee149d0c1" name="aedf6c1537b8423c15494f26ee149d0c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf6c1537b8423c15494f26ee149d0c1">&#9670;&#160;</a></span>vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVec.html">Vec</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>v</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35b616354c1fe8957ef621fd1d4aea79" name="a35b616354c1fe8957ef621fd1d4aea79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b616354c1fe8957ef621fd1d4aea79">&#9670;&#160;</a></span>vec_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vec_copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVec.html">Vec</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>dst</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structVec.html">Vec</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c0c980c643803ae6ba05066914187b4" name="a5c0c980c643803ae6ba05066914187b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0c980c643803ae6ba05066914187b4">&#9670;&#160;</a></span>vec_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vec_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVec.html">Vec</a></td>          <td class="paramname"><span class="paramname"><em>vec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51a53b948156e58a69fa6a7c74dac6ff" name="a51a53b948156e58a69fa6a7c74dac6ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a53b948156e58a69fa6a7c74dac6ff">&#9670;&#160;</a></span>vec_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVec.html">Vec</a> vec_new </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>cap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93d1e612103c8ead56959492bb6c8668" name="a93d1e612103c8ead56959492bb6c8668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d1e612103c8ead56959492bb6c8668">&#9670;&#160;</a></span>vec_ordered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vec_ordered </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVec.html">Vec</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>v</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac96ad3d5af17a3031f9c25b34e64a36d" name="ac96ad3d5af17a3031f9c25b34e64a36d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac96ad3d5af17a3031f9c25b34e64a36d">&#9670;&#160;</a></span>vec_partial_ordered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vec_partial_ordered </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVec.html">Vec</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>v</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cfaa73b8f87e51074b38941f6e2eb75" name="a8cfaa73b8f87e51074b38941f6e2eb75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cfaa73b8f87e51074b38941f6e2eb75">&#9670;&#160;</a></span>vec_rand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vec_rand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVec.html">Vec</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>v</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca714db87540c6a99f66abf07687111d" name="aca714db87540c6a99f66abf07687111d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca714db87540c6a99f66abf07687111d">&#9670;&#160;</a></span>vec_reverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vec_reverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVec.html">Vec</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>v</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="vec_8h.html">vec.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
