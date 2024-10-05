@@ -35,7 +35,7 @@ def plot_data(data, title, filename):
         ax.set_ylabel('Tempo de Execução (ns)')
         ax.set_yscale(yscale)
         handles, labels = ax.get_legend_handles_labels()
-        ax.legend(handles=handles, labels=labels, title='Pivô', markerscale=10)
+        ax.legend(handles=handles, labels=labels, title='Estratégia', markerscale=10)
 
     fig.suptitle(title, fontsize=16)
     plt.tight_layout(rect=(0, 0, 1, 0.95))  # Use a tuple instead of a list
