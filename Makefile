@@ -15,6 +15,9 @@ OUT_DIR  = build
 # Diretório onde o compilador colocará os objetos compilados (arquivos “.o”).
 OBJ_DIR  = $(OUT_DIR)/obj
 
+# Diretório onde se encontrarão as figuras.
+FIG_DIR  = $(OUT_DIR)/fig
+
 
 ## Opções do compilador. ######################################################
 # Qual compilador usar.
@@ -35,6 +38,7 @@ SRCS     = $(wildcard $(SRC_DIR)/*.c)
 OBJS     = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 HEADERS  = $(wildcard $(INC_DIR)/*.h)
 BIN      = $(OUT_DIR)/$(NAME)
+CSV      = $(BIN).csv
 
 
 ## Opções para cada plataforma, compilador, ferramenta, e configuração. #######
@@ -123,11 +127,23 @@ $(BIN)-release: $(BIN)-stripped
 
 # Como executar o programa principal.
 run: $(BIN)
-	@$(BIN)
+	@$<
 
 # Como salvar os resultados num CSV.
-csv: $(BIN)
-	$(BIN) 1 10000 > $(BIN).csv
+$(CSV): $(BIN) | $(OUT_DIR)/
+	$< 1 10000 > $@
+
+csv: $(CSV)
+
+# Como salvar as figuras.
+$(FIG_DIR)/%.pdf: $(CSV) utils/plot.py | $(FIG_DIR)/
+	python utils/plot.py
+
+# Como salvar o relatório.
+report/main.pdf: $(CSV) $(FIG_DIR)/*.pdf report/*.tex
+	$(MAKE) -C report
+
+report: report/main.pdf
 
 
 ## Regras para gerar documentação. ############################################
@@ -139,4 +155,4 @@ $(OUT_DIR)/docs/html/index.html: docs/Doxyfile $(SRCS) $(HEADERS) | $(OUT_DIR)/
 
 
 ## Alvos que não correspondem diretamente a arquivos ou diretórios. ###########
-.PHONY: all clean release docs run csv
+.PHONY: all clean release docs run csv report
