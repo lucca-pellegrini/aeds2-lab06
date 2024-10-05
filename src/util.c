@@ -16,13 +16,13 @@ const char *strat_to_str(PivotStrategy s)
 {
 	switch (s) {
 	case PIVOT_FIRST:
-		return "FIRST";
+		return "Primeiro";
 	case PIVOT_LAST:
-		return "LAST";
+		return "Último";
 	case PIVOT_RAND:
-		return "RAND";
+		return "Aleatório";
 	case PIVOT_MEDIAN:
-		return "MEDIAN";
+		return "Média de Três";
 	}
 
 	fprintf(stderr, "Estratégia desconhecida: %d\n", s);
@@ -33,13 +33,13 @@ const char *type_to_str(VecType t)
 {
 	switch (t) {
 	case VEC_ORDERED:
-		return "ORDERED";
+		return "Ordenados";
 	case VEC_REVERSE:
-		return "REVERSE";
+		return "Ordenados reversos";
 	case VEC_PARTIAL_ORDERED:
-		return "PARTIAL_ORDERED";
+		return "Parcialmente ordenados";
 	case VEC_RAND:
-		return "RAND";
+		return "Aleatórios";
 	}
 
 	fprintf(stderr, "Tipo de vetor desconhecido: %d\n", t);
