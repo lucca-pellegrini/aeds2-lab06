@@ -10,7 +10,7 @@ from matplotlib import rcParams
 def setup_plot_style():
     rcParams['text.usetex'] = True
     rcParams['font.family'] = 'serif'
-    rcParams['font.serif'] = ['Palatino']
+    rcParams['font.serif'] = ['mathpazo']
     sns.set_theme(style='whitegrid')
 
 
@@ -26,7 +26,7 @@ def plot_data(data, title, filename):
             x='num',
             y=data['time'] / 1e1,
             hue='strat',
-            s=0.5,  # Set marker size to 1
+            s=0.5,  # Set marker size
             ax=ax,
             edgecolor='none'  # Remove edge color
         )
