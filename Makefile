@@ -127,7 +127,7 @@ run: $(BIN)
 
 # Como salvar os resultados num CSV.
 csv: $(BIN)
-	$(BIN) 8 10000 > $(BIN).csv
+	$(BIN) 1 10000 > $(BIN).csv
 
 
 ## Regras para gerar documentação. ############################################
