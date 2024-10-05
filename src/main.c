@@ -20,11 +20,12 @@ int main(int argc, char **argv)
 	constexpr int default_step = 10;
 
 	int max_vec_num = default_max_vec_num;
-	int step = default_step;
+	int step;
 	Vec orig, temp;
 
 	switch (argc) {
 	case 1:
+		step = default_step;
 		break;
 	case 3:
 		max_vec_num = atoi(argv[2]);
@@ -32,6 +33,9 @@ int main(int argc, char **argv)
 	case 2:
 		step = atoi(argv[1]);
 		break;
+	default:
+		fprintf(stderr, "Usage: %s [STEP [MAX_VEC_NUM]]\n", *argv);
+		exit(EXIT_FAILURE);
 	}
 
 	orig = vec_new(max_vec_num);
