@@ -22,3 +22,8 @@ tab_width = 8
 indent_style = space
 indent_size = space
 tab_width = 2
+
+[*.tex]
+indent_style = tab
+indent_size = tab
+tab_width = 4
