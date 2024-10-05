@@ -35,9 +35,9 @@ const char *type_to_str(VecType t)
 	case VEC_ORDERED:
 		return "Ordenados";
 	case VEC_REVERSE:
-		return "Ordenados reversos";
+		return "Ordenados Reversos";
 	case VEC_PARTIAL_ORDERED:
-		return "Parcialmente ordenados";
+		return "Parcialmente Ordenados";
 	case VEC_RAND:
 		return "Aleatórios";
 	}
