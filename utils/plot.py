@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import sys
-import argparse
 from matplotlib import rcParams
 
 # Set up LaTeX and Palatino font for matplotlib
@@ -15,57 +14,51 @@ def setup_plot_style():
     sns.set_theme(style='whitegrid')
 
 
-def plot_data(data, title, filename, yscale):
-    plt.figure(figsize=(10, 6))
-    sns.lineplot(
-        data=data,
-        x='num',
-        y=data['time'] / 1e9,
-        hue='strat',
-        marker='',
-        linewidth=1,
-    )
-    plt.title(title)
-    plt.xlabel('Tamanho do Arranjo (num)')
-    plt.ylabel('Tempo de Execução (s)')
-    plt.legend(title='Pivô')
-    plt.yscale(yscale)  # Set the y-axis scale
-    plt.tight_layout()
+def plot_data(data, title, filename):
+    fig, axes = plt.subplots(1, 2, figsize=(20, 6))
+
+    for ax, yscale in zip(axes, ['linear', 'log']):
+        sns.lineplot(
+            data=data,
+            x='num',
+            y=data['time'] / 1e1,
+            hue='strat',
+            marker='',
+            linewidth=1,
+            ax=ax,
+        )
+        ax.set_title(f'Escala {yscale.capitalize()}')
+        ax.set_xlabel('Tamanho do Arranjo (num)')
+        ax.set_ylabel('Tempo de Execução (ns)')
+        ax.set_yscale(yscale)
+        ax.legend(title='Pivô')
+
+    fig.suptitle(title, fontsize=16)
+    plt.tight_layout(rect=(0, 0, 1, 0.95))
     plt.savefig(filename, dpi=900, format='svg')
     # plt.show()
 
 
-def plot_all_data(data, yscale):
+def plot_all_data(data):
     vector_types = data['type'].unique()
     for vector_type in vector_types:
         subset = data[data['type'] == vector_type]
-        title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type} (Escala {yscale.capitalize()})'
-        filename = f'build/fig/{vector_type}_all_data_{yscale}.svg'
-        plot_data(subset, title, filename, yscale)
+        title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type}'
+        filename = f'build/fig/{vector_type}_all_data.svg'
+        plot_data(subset, title, filename)
 
 
-def plot_specific_sizes(data, sizes, yscale):
+def plot_specific_sizes(data, sizes):
     filtered_data = data[data['num'].isin(sizes)]
     vector_types = filtered_data['type'].unique()
     for vector_type in vector_types:
         subset = filtered_data[filtered_data['type'] == vector_type]
-        title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type} (Pontos Selecionados, Escala {yscale.capitalize()})'
-        filename = f'build/fig/{vector_type}_specific_sizes_{yscale}.svg'
-        plot_data(subset, title, filename, yscale)
+        title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type} (Pontos Selecionados)'
+        filename = f'build/fig/{vector_type}_specific_sizes.svg'
+        plot_data(subset, title, filename)
 
 
 def main(arguments):
-    parser = argparse.ArgumentParser(
-        description='Plot quicksort performance data.'
-    )
-    parser.add_argument(
-        '--linear', action='store_true', help='Use linear scale for y-axis'
-    )
-    parser.add_argument(
-        '--log', action='store_true', help='Use logarithmic scale for y-axis'
-    )
-    args = parser.parse_args(arguments)
-
     # Load the CSV data
     data = pd.read_csv('build/main.csv')
 
@@ -77,17 +70,10 @@ def main(arguments):
     setup_plot_style()
 
     # Plot data as requested
-    if args.linear or not (args.linear or args.log):
-        if plot_full:
-            plot_all_data(data, 'linear')
-        if plot_selected:
-            plot_specific_sizes(data, [100, 1000, 10000], 'linear')
-
-    if args.log or not (args.linear or args.log):
-        if plot_full:
-            plot_all_data(data, 'log')
-        if plot_selected:
-            plot_specific_sizes(data, [100, 1000, 10000], 'log')
+    if plot_full:
+        plot_all_data(data)
+    if plot_selected:
+        plot_specific_sizes(data, [100, 1000, 10000])
 
 
 if __name__ == '__main__':
