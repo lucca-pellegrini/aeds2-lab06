@@ -15,9 +15,10 @@ def setup_plot_style():
 
 
 def plot_data(data, title, filename):
+    print(f'Plotting {filename}')
     data = data[data['num'] >= 100]
 
-    fig, axes = plt.subplots(1, 2, figsize=(15, 6))
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4))
 
     for ax, yscale in zip(axes, ['linear', 'log']):
         sns.scatterplot(
@@ -38,7 +39,7 @@ def plot_data(data, title, filename):
 
     fig.suptitle(title, fontsize=16)
     plt.tight_layout(rect=(0, 0, 1, 0.95))  # Use a tuple instead of a list
-    plt.savefig(filename, dpi=900, format='svg')
+    plt.savefig(filename, dpi=1200, format='pdf')
     # plt.show()
 
 
@@ -47,7 +48,7 @@ def plot_all_data(data):
     for vector_type in vector_types:
         subset = data[data['type'] == vector_type]
         title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type}'
-        filename = f'build/fig/{vector_type}_all_data.svg'
+        filename = f'build/fig/{vector_type}_all_data.pdf'
         plot_data(subset, title, filename)
 
 
@@ -57,7 +58,7 @@ def plot_specific_sizes(data, sizes):
     for vector_type in vector_types:
         subset = filtered_data[filtered_data['type'] == vector_type]
         title = f'Performance das Estratégias de Escolha de Pivô com Vetores {vector_type} (Pontos Selecionados)'
-        filename = f'build/fig/{vector_type}_specific_sizes.svg'
+        filename = f'build/fig/{vector_type}_specific_sizes.pdf'
         plot_data(subset, title, filename)
 
 
