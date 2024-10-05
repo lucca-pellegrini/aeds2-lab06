@@ -7,8 +7,6 @@
 #include "vec.h"
 
 #define CSV_HDR "type,strat,num,time"
-#define DEFAULT_MAX_VEC_NUM 10'000
-#define DEFAULT_STEP 10
 
 const VecType types[] = { VEC_ORDERED, VEC_REVERSE, VEC_PARTIAL_ORDERED,
 			  VEC_RAND };
@@ -17,8 +15,12 @@ const PivotStrategy strats[] = { PIVOT_FIRST, PIVOT_LAST, PIVOT_RAND,
 
 int main(int argc, char **argv)
 {
-	int max_vec_num = DEFAULT_MAX_VEC_NUM;
-	int step = DEFAULT_STEP;
+	// Valores padrão.
+	constexpr int default_max_vec_num = 10'000;
+	constexpr int default_step = 10;
+
+	int max_vec_num = default_max_vec_num;
+	int step = default_step;
 	Vec orig, temp;
 
 	switch (argc) {
