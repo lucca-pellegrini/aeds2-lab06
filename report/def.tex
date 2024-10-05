@@ -1,0 +1,73 @@
+\usepackage[brazilian]{babel} % Regras tipográficas
+\usepackage{graphicx} % Required for inserting images
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=21pt]{geometry} % Margens do documento
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{luacode}
+\usepackage[dvipsnames]{xcolor} % Para a definição de cores
+\usepackage[
+	cachedir = \detokenize{.cache/minted}
+]{minted}   % Para a inclusão literal de arquivos com sintaxe
+
+\usepackage{siunitx} % Facilita o uso das unidades do SI
+        \sisetup{output-decimal-marker = {,}} % Configura a vírgula como o separador decimal
+        \sisetup{range-phrase = \text{--}}
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=21pt]{geometry} % Margens do documento
+% \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Legendas customizadas pra tabelas e imagens
+\usepackage{booktabs} % Tabelas variáveis
+
+\usepackage[sc]{mathpazo} % Usando uma fonte diferente para o documento
+        \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+        \linespread{1.05} % Aumentando o espaçamento entre as linhas (a fonte não fica tão legal com o espaçamento padrão)
+        \usepackage{microtype} % Não lembro o que isso faz
+
+\usepackage{enumitem} % Listas customizadas
+        \setlist[itemize]{noitemsep} % Pra tornar as listas mais compactas
+
+\usepackage{abstract}
+        \renewcommand{\abstractnamefont}{\normalfont\bfseries} % Deixa o "Resumo" em negrito
+        \renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Deixa o conteúdo do resumo em itálico
+
+\usepackage{titlesec} % Customização do título
+        \renewcommand\thesection{\Roman{section}} % Números romanos para as secções
+        \renewcommand\thesubsection{\roman{subsection}} % Para as subsecções também
+        \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Muda a aparência do título das secções
+        \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Muda a aparência do título das subsecções
+
+\usepackage{fancyhdr} % Cabeçalho
+        \pagestyle{fancy} % Cabeçalho em todas as páginas
+        \fancyhead{}
+        \fancyfoot{}
+        \fancyhead[C]{Implementação do QuickSort com Variação na Escolha do
+	Pivô}% $\bullet$ Lucca Pellegrini $\bullet$ \today} % Custom header text
+        \fancyfoot[C]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customização do título
+
+\usepackage{url} % Pra ajudar a lidar com urls chatos
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts} % AMS-TeX pra equações (em geral) mais bonitas e pra umas outras coisas
+\usepackage{csquotes}
+\usepackage{svg}
+
+%==============================================================================
+
+\newcommand{\mintsrc}[3]{
+	\inputminted[
+		linenos = true,
+		fontsize = \footnotesize,
+		frame = lines,
+		framesep=2em,
+		rulecolor=\color{Gray},
+		label=\fbox{\color{Black}#3},
+		labelposition=topline
+	]{#1}{../#2/#3}
+}

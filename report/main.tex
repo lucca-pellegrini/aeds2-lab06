@@ -1,0 +1,130 @@
+% LTeX: language=pt-BR
+
+\documentclass[10pt,oneside,onecolumn]{article}
+\input{def.tex}
+
+%==============================================================================
+
+% \setlength{\droptitle}{-4\baselineskip} % Sobe o título um pouco pra economizar espaço
+
+% \pretitle{\begin{center}\Huge\bfseries} % Formatação do título
+% \posttitle{\end{center}} % Fecha a formatação
+
+\title{{\huge\bfseries Implementação do QuickSort com Variação na Escolha do
+	Pivô}\\
+Laboratório 06}
+\author{ % Autores
+	\textsc{Lucca Pellegrini} \\
+	\normalsize{842986}
+	% \and
+	% \textsc{Thomaz, João Pedro} \\
+	% \normalsize{...}
+	% \and
+	% \textsc{Luiza Fonseca} \\
+	% \normalsize{...}
+}
+
+\date{\today}
+
+% \renewcommand{\maketitlehookd}{ % O resumo
+% 	\begin{abstract}
+% 	\noindent
+% 	Nesse trabalho, implementamos o algoritmo \textit{QuickSort} variando a
+% 	escolha do pivô, e observando o desempenho de cada abordagem em quatro
+% 	tipos de arranjos de inteiros: ordenados, ordenados reversos,
+% 	parcialmente ordenados, e aleatórios --- de 1 a 10.000 elementos.
+% 	\end{abstract}
+% }
+
+\begin{document}
+
+%==============================================================================
+
+\maketitle
+\section{Introdução}
+
+Nesse trabalho, implementamos o algoritmo \textit{QuickSort} em \textit{C,}
+variando a escolha do pivô, e observando o desempenho de cada abordagem em
+quatro tipos de arranjos de inteiros: ordenados, ordenados reversos,
+parcialmente ordenados, e aleatórios, de um a 10.000 elementos. Os vetores
+parcialmente ordenados são gerados ao iterar sobre cada dez índices,
+aleatoriamente, de um vetor ordenado, e o trocar com outro índice aleatório.
+Para ordená-los, usamos o QuickSort com quatro mecanismos para a escolha do
+pivô: primeiro elemento, último elemento, elemento aleatório, e mediana de três
+--- em que os elementos primeiro, do meio, e último são comparados e ordenados
+entre si, e o mediano se torna o pivô.
+
+A fim de facilitar a execução dos testes, o código foi modularizado em três
+unidades principais: um arquivo \texttt{quicksort.c} contém a implementação do
+algoritmo com cada estratégia de escolha do pivô, um arquivo \texttt{cron.c}
+implementa um mecanismo para medir tempos de execução usando duas funções:
+\mint{c}|void cron_start(void); unsigned long cron_stop(void);| em que a
+primeira inicia um cronômetro, e a segunda retorna o tempo em nanosegundos
+desde o seu início. Já o arquivo \texttt{main.c} recebe o número de iterações
+por meio dos parâmetros do programa, executa o algoritmo para cada estratégia,
+para cada tipo de vetor, e exibe a saída em formato \textit{csv}. Essa saída é
+processada em Python usando a biblioteca \textit{Pandas}, e os gráficos são
+gerados automáticamente com o \textit{matplotlib}. O programa completo se
+encontra no Apêndice~\ref{apx:codigo}, e o restante do código está no
+GitHub.\footnote{\url{https://github.com/lucca-pellegrini/aeds2-lab06}}
+
+\section{Resultados}
+
+\subsection{Gráficos}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../build/fig/Ordenados_all_data.pdf}
+	\captionsetup{skip=0pt} % Adjust the skip length here (default is 10pt)
+	\caption{Tempos de execução para cada estratégia em vetores já ordenados.}
+	\label{fig:ord}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../build/fig/Ordenados Reversos_all_data.pdf}
+	\captionsetup{skip=0pt} % Adjust the skip length here (default is 10pt)
+	\caption{Tempos de execução para cada estratégia em vetores ordenados de
+	forma decrescente (ordem reversa).}
+	\label{fig:rev}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../build/fig/Aleatórios_all_data.pdf}
+	\captionsetup{skip=0pt} % Adjust the skip length here (default is 10pt)
+	\caption{Tempos de execução para cada estratégia em vetores gerados
+	aleatoriamente, em que cada elemento é um número independente entre 1 e o
+	tamanho do vetor.}
+	\label{fig:rand}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../build/fig/Parcialmente Ordenados_all_data.pdf}
+	\captionsetup{skip=0pt} % Adjust the skip length here (default is 10pt)
+	\caption{Tempos de execução para cada estratégia em vetores parcialmente
+	ordenados, gerados a partir de um vetor já ordenado, em que se seleciona
+	10\% dos elementos, aleatoriamente, e os troca com outro elemento escolhido
+	aleatoriamente.}
+	\label{fig:part}
+\end{figure}
+
+%==============================================================================
+
+\newpage
+\appendix
+\section{Programa Completo}\label{apx:codigo}
+
+\mintsrc{c}{src}{main.c}
+\newpage \mintsrc{c}{include}{quicksort.h}
+\mintsrc{c}{src}{quicksort.c}
+\newpage \mintsrc{c}{include}{vec.h}
+\mintsrc{c}{src}{vec.c}
+\newpage \mintsrc{c}{include}{cron.h}
+\mintsrc{c}{src}{cron.c}
+\newpage \mintsrc{c}{include}{util.h}
+\mintsrc{c}{src}{util.c}
+
+%==============================================================================
+\end{document}
