@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 
 	for (size_t i = 0; i < ARRLEN(types); ++i) {
 		VecType type = types[i];
-		for (int i = 0; i < max_vec_num; i += step) {
+		for (int i = 1; i <= max_vec_num; i += step) {
 			vec(&orig, i, type);
 			for (size_t i = 0; i < ARRLEN(strats); ++i) {
 				unsigned long time;
