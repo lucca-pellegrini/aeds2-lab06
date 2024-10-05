@@ -108,39 +108,33 @@ $(function(){initNavTree('util_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">util.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="util_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// SPDX-License-Identifier: ISC</span></div>
+<a href="util_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifndef UTIL_H</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="util_8h.html#ab41e2a6ec010e74422c6618274795044">   15</a></span><span class="preprocessor">#define UTIL_H</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;errno.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="quicksort_8h.html">quicksort.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="vec_8h.html">vec.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="" data-end="">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="util_8h.html#af2cc43d614dbc79f56a6dca499357ea2">   35</a></span><span class="preprocessor">#define ERRNOCHECK(condition, errmsg, label)                           \</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">        do {                                                           \</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">                if (condition) {                                       \</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">                        int errsv = errno;                             \</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">                        fprintf(stderr, &quot;%s:%d:%s: Error: &quot;, __FILE__, \</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">                                __LINE__, __func__);                   \</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">                        errno = errsv;                                 \</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">                        perror((errmsg));                              \</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">                        goto label;                                    \</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">                }                                                      \</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">        } while (0)</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="quicksort_8h.html">quicksort.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="vec_8h.html">vec.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="" data-end="">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="util_8h.html#af2cc43d614dbc79f56a6dca499357ea2">    9</a></span><span class="preprocessor">#define ERRNOCHECK(condition, errmsg, label)                           \</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">        do {                                                           \</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">                if (condition) {                                       \</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">                        int errsv = errno;                             \</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">                        fprintf(stderr, &quot;%s:%d:%s: Error: &quot;, __FILE__, \</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">                                __LINE__, __func__);                   \</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">                        errno = errsv;                                 \</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">                        perror((errmsg));                              \</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">                        goto label;                                    \</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">                }                                                      \</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">        } while (0)</span></div>
 </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="util_8h.html#a3fadd6cadff03d94da987f1defb87548">   47</a></span><span class="preprocessor">#define ARRLEN(arr) (sizeof(arr) / sizeof(typeof(*arr)))</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> <a class="code hl_function" href="util_8h.html#ae4b79359283c5360c156aff9e3584a22">swap</a>(<span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> a, <span class="keywordtype">size_t</span> b);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="util_8h.html#a250a8f9dea131e0f8b61f06cb5a8943b">strat_to_str</a>(<a class="code hl_enumeration" href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a> s);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="util_8h.html#aee042884836e9d9a67cc86b5e455a739">type_to_str</a>(<a class="code hl_enumeration" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a> t);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">// !UTIL_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="util_8h.html#a3fadd6cadff03d94da987f1defb87548">   21</a></span><span class="preprocessor">#define ARRLEN(arr) (sizeof(arr) / sizeof(typeof(*arr)))</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="util_8h.html#ae4b79359283c5360c156aff9e3584a22">swap</a>(<span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> a, <span class="keywordtype">size_t</span> b);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="util_8h.html#a250a8f9dea131e0f8b61f06cb5a8943b">strat_to_str</a>(<a class="code hl_enumeration" href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a> s);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="util_8h.html#aee042884836e9d9a67cc86b5e455a739">type_to_str</a>(<a class="code hl_enumeration" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a> t);</div>
 <div class="ttc" id="aquicksort_8h_html"><div class="ttname"><a href="quicksort_8h.html">quicksort.h</a></div></div>
 <div class="ttc" id="aquicksort_8h_html_a001800b53b776b368a84dc646ee6499d"><div class="ttname"><a href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a></div><div class="ttdeci">PivotStrategy</div><div class="ttdef"><b>Definição</b> quicksort.h:5</div></div>
 <div class="ttc" id="autil_8h_html_a250a8f9dea131e0f8b61f06cb5a8943b"><div class="ttname"><a href="util_8h.html#a250a8f9dea131e0f8b61f06cb5a8943b">strat_to_str</a></div><div class="ttdeci">const char * strat_to_str(PivotStrategy s)</div><div class="ttdef"><b>Definição</b> util.c:15</div></div>

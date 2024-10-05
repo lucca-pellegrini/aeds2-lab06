@@ -106,9 +106,6 @@ $(function(){initNavTree('util_8h.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Referência ao ficheiro util.h</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Declarações de utilidades miscelâneas.  
-<a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="quicksort_8h_source.html">quicksort.h</a>&quot;</code><br />
@@ -118,10 +115,7 @@ $(function(){initNavTree('util_8h.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ab41e2a6ec010e74422c6618274795044" id="r_ab41e2a6ec010e74422c6618274795044"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab41e2a6ec010e74422c6618274795044">UTIL_H</a></td></tr>
-<tr class="separator:ab41e2a6ec010e74422c6618274795044"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2cc43d614dbc79f56a6dca499357ea2" id="r_af2cc43d614dbc79f56a6dca499357ea2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2cc43d614dbc79f56a6dca499357ea2">ERRNOCHECK</a>(condition,  errmsg,  label)</td></tr>
-<tr class="memdesc:af2cc43d614dbc79f56a6dca499357ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro para verificação de erros e redirecionamento de fluxo.  <br /></td></tr>
 <tr class="separator:af2cc43d614dbc79f56a6dca499357ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fadd6cadff03d94da987f1defb87548" id="r_a3fadd6cadff03d94da987f1defb87548"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fadd6cadff03d94da987f1defb87548">ARRLEN</a>(arr)&#160;&#160;&#160;(sizeof(arr) / sizeof(typeof(*arr)))</td></tr>
 <tr class="separator:a3fadd6cadff03d94da987f1defb87548"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,10 +129,7 @@ Funções</h2></td></tr>
 <tr class="memitem:aee042884836e9d9a67cc86b5e455a739" id="r_aee042884836e9d9a67cc86b5e455a739"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee042884836e9d9a67cc86b5e455a739">type_to_str</a> (<a class="el" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a> t)</td></tr>
 <tr class="separator:aee042884836e9d9a67cc86b5e455a739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p>Declarações de utilidades miscelâneas. </p>
-<p>Este arquivo contém declarações de utilidades diversas que podem ser usadas em várias partes do projeto. Atualmente, ele define uma macro para verificação de erros (<code>ERRNOCHECK</code>), mas outras utilidades miscelâneas poderão ser adicionadas futuramente. </p>
-</div><h2 class="groupheader">Documentação das macros</h2>
+<h2 class="groupheader">Documentação das macros</h2>
 <a id="a3fadd6cadff03d94da987f1defb87548" name="a3fadd6cadff03d94da987f1defb87548"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3fadd6cadff03d94da987f1defb87548">&#9670;&#160;</a></span>ARRLEN</h2>
 
@@ -190,31 +181,6 @@ Funções</h2></td></tr>
 <div class="line">                }                                                      \</div>
 <div class="line">        } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
-<p>Macro para verificação de erros e redirecionamento de fluxo. </p>
-<p>Esta macro verifica uma condição (<code>condition</code>) e, se verdadeira, exibe uma mensagem de erro (<code>errmsg</code>) junto com detalhes do erro do sistema. Em seguida, redireciona a execução para o rótulo especificado (<code>label</code>).</p>
-<dl class="params"><dt>Parâmetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">condition</td><td>Condição a ser verificada. </td></tr>
-    <tr><td class="paramname">errmsg</td><td>Mensagem de erro a ser exibida se a condição for verdadeira. </td></tr>
-    <tr><td class="paramname">label</td><td>Rótulo para onde o fluxo de execução será redirecionado se a condição for verdadeira. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab41e2a6ec010e74422c6618274795044" name="ab41e2a6ec010e74422c6618274795044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab41e2a6ec010e74422c6618274795044">&#9670;&#160;</a></span>UTIL_H</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define UTIL_H</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 </div>
 </div>
 <h2 class="groupheader">Documentação das funções</h2>

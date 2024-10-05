@@ -8,7 +8,7 @@ var indexSectionsWithContent =
   5: "psv",
   6: "pv",
   7: "pv",
-  8: "_aceu"
+  8: "_ace"
 };
 
 var indexSectionNames =
