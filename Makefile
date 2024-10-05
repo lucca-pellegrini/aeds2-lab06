@@ -41,7 +41,7 @@ BIN      = $(OUT_DIR)/$(NAME)
 # Opções para compiladores específicos.
 
 # Ative as opções de análise estática de código do GCC.
-GCCCFLAGS   += --debug -fanalyzer -Wanalyzer-too-complex
+GCCCFLAGS   += --debug -fanalyzer
 # Desative o aviso do Clang sobre falta de newline ao final do arquivo.
 CLANGCFLAGS += --debug -Wno-newline-eof
 # CLANGCFLAGS += -Xanalyzer ...

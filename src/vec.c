@@ -8,6 +8,24 @@
 
 static bool rand_is_seeded = false;
 
+void vec(Vec *restrict v, size_t n, VecType t)
+{
+	switch (t) {
+	case VEC_ORDERED:
+		vec_ordered(v, n);
+		break;
+	case VEC_REVERSE:
+		vec_reverse(v, n);
+		break;
+	case VEC_PARTIAL_ORDERED:
+		vec_partial_ordered(v, n);
+		break;
+	case VEC_RAND:
+		vec_rand(v, n);
+		break;
+	}
+}
+
 void vec_ordered(Vec *restrict v, size_t n)
 {
 	const int min = 1;

@@ -17,6 +17,9 @@
 #include <errno.h>
 #include <stdio.h>
 
+#include "quicksort.h"
+#include "vec.h"
+
 /**
  * @brief Macro para verificação de erros e redirecionamento de fluxo.
  *
@@ -41,7 +44,10 @@
 		}                                                      \
 	} while (0)
 
+#define ARRLEN(arr) (sizeof(arr) / sizeof(typeof(*arr)))
 
 void swap(int *arr, size_t a, size_t b);
+const char *strat_to_str(PivotStrategy s);
+const char *type_to_str(VecType t);
 
 #endif // !UTIL_H

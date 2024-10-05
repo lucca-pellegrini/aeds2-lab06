@@ -1,5 +1,6 @@
 #include <inttypes.h>
 #include <stdbool.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -38,6 +39,9 @@ void quicksort(int *vec, size_t n, PivotStrategy strat)
 	case PIVOT_MEDIAN:
 		func = (pivot_func_t *)&pivot_median;
 		break;
+	default:
+		fprintf(stderr, "Estratégia desconhecida: %d\n", strat);
+		exit(EXIT_FAILURE);
 	}
 
 	quicksort_rec(vec, 0, n - 1, func);
