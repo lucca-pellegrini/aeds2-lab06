@@ -35,6 +35,8 @@ int main(int argc, char **argv)
 	orig = vec_new(max_vec_num);
 	temp = vec_new(max_vec_num);
 
+	puts(CSV_HDR);
+
 	for (size_t i = 0; i < ARRLEN(types); ++i) {
 		VecType type = types[i];
 		for (int i = 0; i < max_vec_num; i += step) {
