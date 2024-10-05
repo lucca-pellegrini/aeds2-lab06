@@ -28,7 +28,7 @@ void vec(Vec *restrict v, size_t n, VecType t)
 
 void vec_ordered(Vec *restrict v, size_t n)
 {
-	const int min = 1;
+	constexpr int min = 1;
 
 	for (size_t i = 0; i < n; ++i)
 		v->arr[i] = min + i;
@@ -37,7 +37,7 @@ void vec_ordered(Vec *restrict v, size_t n)
 
 void vec_reverse(Vec *restrict v, size_t n)
 {
-	const int min = 1;
+	constexpr int min = 1;
 
 	for (size_t i = n; i > 0; --i)
 		v->arr[i - 1] = min + i - 1;
