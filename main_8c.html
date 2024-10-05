@@ -101,7 +101,9 @@ $(function(){initNavTree('main_8c.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
   <div class="headertitle"><div class="title">Referência ao ficheiro main.c</div></div>
 </div><!--header-->
 <div class="contents">
@@ -116,6 +118,18 @@ $(function(){initNavTree('main_8c.html',''); initResizable(); });
 Macros</h2></td></tr>
 <tr class="memitem:a807f8111f04cd856b886d100e5544c1f" id="r_a807f8111f04cd856b886d100e5544c1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a807f8111f04cd856b886d100e5544c1f">CSV_HDR</a>&#160;&#160;&#160;&quot;type,strat,num,time&quot;</td></tr>
 <tr class="separator:a807f8111f04cd856b886d100e5544c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627" id="r_a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:a535d177a63069be85521275e29e1f118" id="r_a535d177a63069be85521275e29e1f118"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a535d177a63069be85521275e29e1f118">types</a> []</td></tr>
+<tr class="separator:a535d177a63069be85521275e29e1f118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783b903dd53a311d57b9bad04f47e469" id="r_a783b903dd53a311d57b9bad04f47e469"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a783b903dd53a311d57b9bad04f47e469">strats</a> []</td></tr>
+<tr class="separator:a783b903dd53a311d57b9bad04f47e469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentação das macros</h2>
 <a id="a807f8111f04cd856b886d100e5544c1f" name="a807f8111f04cd856b886d100e5544c1f"></a>
@@ -130,6 +144,69 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das variáveis</h2>
+<a id="a783b903dd53a311d57b9bad04f47e469" name="a783b903dd53a311d57b9bad04f47e469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783b903dd53a311d57b9bad04f47e469">&#9670;&#160;</a></span>strats</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499d">PivotStrategy</a> strats[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= { <a class="code hl_enumvalue" href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499dacc7bb67d1437c1c948ebff80f5f300d2">PIVOT_FIRST</a>, <a class="code hl_enumvalue" href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499da9ef3aadae857cece6b78f984f57dd75f">PIVOT_LAST</a>, <a class="code hl_enumvalue" href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499dace0f24b68f0e1baf16784d5e271b27c9">PIVOT_RAND</a>,</div>
+<div class="line">                                 <a class="code hl_enumvalue" href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499da5278e6a9e80f11ba31e46dd0e67de9c2">PIVOT_MEDIAN</a> }</div>
+<div class="ttc" id="aquicksort_8h_html_a001800b53b776b368a84dc646ee6499da5278e6a9e80f11ba31e46dd0e67de9c2"><div class="ttname"><a href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499da5278e6a9e80f11ba31e46dd0e67de9c2">PIVOT_MEDIAN</a></div><div class="ttdeci">@ PIVOT_MEDIAN</div><div class="ttdef"><b>Definição</b> quicksort.h:9</div></div>
+<div class="ttc" id="aquicksort_8h_html_a001800b53b776b368a84dc646ee6499da9ef3aadae857cece6b78f984f57dd75f"><div class="ttname"><a href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499da9ef3aadae857cece6b78f984f57dd75f">PIVOT_LAST</a></div><div class="ttdeci">@ PIVOT_LAST</div><div class="ttdef"><b>Definição</b> quicksort.h:7</div></div>
+<div class="ttc" id="aquicksort_8h_html_a001800b53b776b368a84dc646ee6499dacc7bb67d1437c1c948ebff80f5f300d2"><div class="ttname"><a href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499dacc7bb67d1437c1c948ebff80f5f300d2">PIVOT_FIRST</a></div><div class="ttdeci">@ PIVOT_FIRST</div><div class="ttdef"><b>Definição</b> quicksort.h:6</div></div>
+<div class="ttc" id="aquicksort_8h_html_a001800b53b776b368a84dc646ee6499dace0f24b68f0e1baf16784d5e271b27c9"><div class="ttname"><a href="quicksort_8h.html#a001800b53b776b368a84dc646ee6499dace0f24b68f0e1baf16784d5e271b27c9">PIVOT_RAND</a></div><div class="ttdeci">@ PIVOT_RAND</div><div class="ttdef"><b>Definição</b> quicksort.h:8</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a535d177a63069be85521275e29e1f118" name="a535d177a63069be85521275e29e1f118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a535d177a63069be85521275e29e1f118">&#9670;&#160;</a></span>types</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6e">VecType</a> types[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= { <a class="code hl_enumvalue" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191">VEC_ORDERED</a>, <a class="code hl_enumvalue" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680">VEC_REVERSE</a>, <a class="code hl_enumvalue" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384">VEC_PARTIAL_ORDERED</a>,</div>
+<div class="line">                          <a class="code hl_enumvalue" href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4">VEC_RAND</a> }</div>
+<div class="ttc" id="avec_8h_html_ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191"><div class="ttname"><a href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6ea7fbe1b455f2a67f695b8fe0665c85191">VEC_ORDERED</a></div><div class="ttdeci">@ VEC_ORDERED</div><div class="ttdef"><b>Definição</b> vec.h:12</div></div>
+<div class="ttc" id="avec_8h_html_ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384"><div class="ttname"><a href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaa12f1227db76718c85261df181a96384">VEC_PARTIAL_ORDERED</a></div><div class="ttdeci">@ VEC_PARTIAL_ORDERED</div><div class="ttdef"><b>Definição</b> vec.h:14</div></div>
+<div class="ttc" id="avec_8h_html_ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4"><div class="ttname"><a href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eac6781328e6223da0dcb686c83826dec4">VEC_RAND</a></div><div class="ttdeci">@ VEC_RAND</div><div class="ttdef"><b>Definição</b> vec.h:15</div></div>
+<div class="ttc" id="avec_8h_html_ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680"><div class="ttname"><a href="vec_8h.html#ae93f92d10730a52ed3b207d5811f6a6eaf5694131c64c0837edb3ab1417365680">VEC_REVERSE</a></div><div class="ttdeci">@ VEC_REVERSE</div><div class="ttdef"><b>Definição</b> vec.h:13</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

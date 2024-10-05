@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ts_0',['ts',['../cron_8c.html#ad7bf7613b53788b73c72e70d5335e7c8',1,'cron.c']]]
+  ['strats_0',['strats',['../main_8c.html#a783b903dd53a311d57b9bad04f47e469',1,'main.c']]]
 ];
