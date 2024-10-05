@@ -7,21 +7,37 @@
 #include "vec.h"
 
 #define CSV_HDR "type,strat,num,time"
-#define MAX_VEC_NUM 10'000
+#define DEFAULT_MAX_VEC_NUM 10'000
+#define DEFAULT_STEP 10
 
 const VecType types[] = { VEC_ORDERED, VEC_REVERSE, VEC_PARTIAL_ORDERED,
 			  VEC_RAND };
 const PivotStrategy strats[] = { PIVOT_FIRST, PIVOT_LAST, PIVOT_RAND,
 				 PIVOT_MEDIAN };
 
-int main(void)
+int main(int argc, char **argv)
 {
-	Vec orig = vec_new(MAX_VEC_NUM);
-	Vec temp = vec_new(MAX_VEC_NUM);
+	int max_vec_num = DEFAULT_MAX_VEC_NUM;
+	int step = DEFAULT_STEP;
+	Vec orig, temp;
+
+	switch (argc) {
+	case 1:
+		break;
+	case 3:
+		max_vec_num = atoi(argv[2]);
+		[[fallthrough]];
+	case 2:
+		step = atoi(argv[1]);
+		break;
+	}
+
+	orig = vec_new(max_vec_num);
+	temp = vec_new(max_vec_num);
 
 	for (size_t i = 0; i < ARRLEN(types); ++i) {
 		VecType type = types[i];
-		for (int i = 0; i < MAX_VEC_NUM; ++i) {
+		for (int i = 0; i < max_vec_num; i += step) {
 			vec(&orig, i, type);
 			for (size_t i = 0; i < ARRLEN(strats); ++i) {
 				unsigned long time;
