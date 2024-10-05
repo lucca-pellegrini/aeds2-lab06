@@ -125,6 +125,10 @@ $(BIN)-release: $(BIN)-stripped
 run: $(BIN)
 	@$(BIN)
 
+# Como salvar os resultados num CSV.
+csv: $(BIN)
+	$(BIN) 8 10000 > $(BIN).csv
+
 
 ## Regras para gerar documentação. ############################################
 # Gera a documentação usando Doxygen.
@@ -135,4 +139,4 @@ $(OUT_DIR)/docs/html/index.html: docs/Doxyfile $(SRCS) $(HEADERS) | $(OUT_DIR)/
 
 
 ## Alvos que não correspondem diretamente a arquivos ou diretórios. ###########
-.PHONY: all clean release docs run
+.PHONY: all clean release docs run csv
