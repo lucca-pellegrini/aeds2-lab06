@@ -22,7 +22,7 @@ const char *strat_to_str(PivotStrategy s)
 	case PIVOT_RAND:
 		return "Aleatório";
 	case PIVOT_MEDIAN:
-		return "Média de Três";
+		return "Mediana de Três";
 	}
 
 	fprintf(stderr, "Estratégia desconhecida: %d\n", s);
