@@ -27,8 +27,13 @@ def generate_latex_table(data, vector_type, sizes):
         index=True,
         header=True,
         escape=False,
-        column_format='|c|' + 'c|' * len(pivot_table.columns),
+        column_format='||c|' + 'c|' * len(pivot_table.columns) + '|',
     )
+
+    # Replace \toprule, \midrule, and \bottomrule with \hline
+    latex_table = latex_table.replace('\\toprule', '\\hline')
+    latex_table = latex_table.replace('\\midrule', '\\hline')
+    latex_table = latex_table.replace('\\bottomrule', '\\hline')
     return latex_table
 
 
