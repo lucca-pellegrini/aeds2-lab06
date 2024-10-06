@@ -10,8 +10,7 @@
 % \pretitle{\begin{center}\Huge\bfseries} % Formatação do título
 % \posttitle{\end{center}} % Fecha a formatação
 
-\title{{\huge\bfseries Implementação do QuickSort com Variação na Escolha do
-	Pivô}\\
+\title{{\huge\bfseries Quicksort e seu Pivô}\\
 Laboratório 06}
 \author{ % Autores
 	\textsc{Lucca Pellegrini} \\
@@ -29,7 +28,7 @@ Laboratório 06}
 % \renewcommand{\maketitlehookd}{ % O resumo
 % 	\begin{abstract}
 % 	\noindent
-% 	Nesse trabalho, implementamos o algoritmo \textit{QuickSort} variando a
+% 	Nesse trabalho, implementamos o algoritmo \textit{quicksort} variando a
 % 	escolha do pivô, e observando o desempenho de cada abordagem em quatro
 % 	tipos de arranjos de inteiros: ordenados, ordenados reversos,
 % 	parcialmente ordenados, e aleatórios --- de 1 a 10.000 elementos.
@@ -43,13 +42,13 @@ Laboratório 06}
 \maketitle
 \section{Introdução}
 
-Nesse trabalho, implementamos o algoritmo \textit{QuickSort} em \textit{C,}
+Nesse trabalho, implementamos o algoritmo \textit{quicksort} em \textit{C,}
 variando a escolha do pivô, e observando o desempenho de cada abordagem em
 quatro tipos de arranjos de inteiros: ordenados, ordenados reversos,
 parcialmente ordenados, e aleatórios, de um a 10.000 elementos. Os vetores
 parcialmente ordenados são gerados ao iterar sobre cada dez índices,
 aleatoriamente, de um vetor ordenado, e o trocar com outro índice aleatório.
-Para ordená-los, usamos o QuickSort com quatro mecanismos para a escolha do
+Para ordená-los, usamos o quicksort com quatro mecanismos para a escolha do
 pivô: primeiro elemento, último elemento, elemento aleatório, e mediana de três
 --- em que os elementos primeiro, do meio, e último são comparados e ordenados
 entre si, e o mediano se torna o pivô.
@@ -70,6 +69,7 @@ GitHub.\footnote{\url{https://github.com/lucca-pellegrini/aeds2-lab06}}
 
 \newpage
 \section{Resultados}
+\subsection{Dados}
 
 \input{../build/fig/tables.tex}
 
@@ -77,7 +77,8 @@ GitHub.\footnote{\url{https://github.com/lucca-pellegrini/aeds2-lab06}}
 	\centering
 	\includegraphics[width=1\linewidth]{../build/fig/Ordenados_all_data.pdf}
 	\captionsetup{skip=0pt} % Adjust the skip length here (default is 10pt)
-	\caption{Tempos de execução para cada estratégia em vetores já ordenados.}
+	\caption{Tempos de execução para cada estratégia em vetores já ordenados.
+	Isso é, vetores de forma $\begin{bmatrix} 1 & 2 & 3 & \cdots & n \end{bmatrix}$.}
 	\label{fig:ord}
 \end{figure}
 
@@ -86,7 +87,8 @@ GitHub.\footnote{\url{https://github.com/lucca-pellegrini/aeds2-lab06}}
 	\includegraphics[width=1\linewidth]{../build/fig/Ordenados Reversos_all_data.pdf}
 	\captionsetup{skip=0pt} % Adjust the skip length here (default is 10pt)
 	\caption{Tempos de execução para cada estratégia em vetores ordenados de
-	forma decrescente (ordem reversa).}
+	forma decrescente (ordem reversa). Isso é, vetores de forma
+	$\begin{bmatrix} n & n-1 & n-2 & \cdots & 1 \end{bmatrix}$.}
 	\label{fig:rev}
 \end{figure}
 
@@ -110,6 +112,53 @@ GitHub.\footnote{\url{https://github.com/lucca-pellegrini/aeds2-lab06}}
 	aleatoriamente.}
 	\label{fig:part}
 \end{figure}
+
+\subsection{Discussão}
+
+Destes resultados, o que mais se destaca --- especialmente nas figuras
+\ref{fig:ord} e \ref{fig:rev} --- é que a escolha do pivô como o primeiro ou o
+último elemento do vetor tem um impacto dramático no tempo de execução quando o
+quicksort é aplicado a um vetor já ordenado ou ordenado de forma decrescente, a
+ponto que, no caso do vetor com 10.000 elementos (veja, por exemplo, a
+tabela~\ref{tbl:Ordenados}), há um aumento de quase 6000\% no tempo de execução
+em relação ao pivô escolhido aleatoriamente --- mais de uma ordem de magnitude.
+No caso desses vetores, é indiscutível que a estratégia mais eficaz foi a
+mediana de três, provavelmente porque, selecionando o meio do vetor como pivô,
+assim dividindo-o em dois nas chamadas recursivas, o número de chamadas se
+aproxima ao máximo de $\Theta(\log_2 n)$, enquanto, no caso do primeiro ou
+último elemento como pivô, por particionar o vetor de forma extremamente
+desigual, sistematicamente escolhe o pior pivô, e se aproxima de $\Theta(n)$, o
+pior caso possível do quicksort.
+
+No caso dos vetores aleatórios (figura~\ref{fig:rand},
+tabela~\ref{tbl:Aleatórios}), não se observa uma grande diferença nos tempos de
+execução, já que não há correlação entre a posição dos elementos no vetor e a
+escolha do pivô. Em um vetor aleatório, cada elemento tem a mesma probabilidade
+de ser o pivô ideal, o que resulta em partições mais equilibradas na média. O
+surpreendente é que a estratégia de escolher o primeiro ou o último elemento
+tem desempenho melhor que os demais. Isso provavelmente se deve ao fato de que,
+como um vetor de 10.000 números inteiros é relativamente pequeno, há um custo
+perceptível em computar um número aleatório, ou em ordenar três elementos entre
+si, procedimentos necessários para escolher um pivô aleatório, ou baseado em
+mediana de três. Pode-se imaginar que, à medida que $n$ cresce, a diferença
+entre os desempenhos de cada estratégia, nesse caso, se tornará cada vez menos
+pronunciado.
+
+Finalmente, no caso dos vetores parcialmente ordenados (figura~\ref{fig:part},
+tabela~\ref{tbl:Parcialmente Ordenados}), nota-se novamente que a mediana de
+três é a estratégia mais vantajosa, já que particiona o vetor de maneira
+equilibrada. O que se destaca aqui é que, diferentemente do caso anterior,
+apesar da estratégia de pivô aleatório ter o pior desempenho, isso não pode ser
+explicado pelo custo de computar um pivô não trivial, uma vez que --- se fosse
+o caso --- a mediana de três não teria o melhor desempenho. Na verdade, o que
+provavelmente justifica a ineficiência do pivô aleatório nesse caso é o fato de
+que, por ser completamente aleatório, não tem a oportunidade de aproveitar a
+estrutura do vetor parcialmente ordenado, enquanto a mediana de três considera
+três pontos distintos para fazer um particionamento equilibrado. Já a escolha
+do primeiro ou último elemento, por outro lado, não é ineficiente pois, nesse
+tipo de vetor, ainda há a probabilidade dos elementos nas extremidades estarem
+próximos do valor mediano. Isso é, diferentemente do caso dos vetores ordenados
+ou reversos, não há uma escolha sistemática do pior elemento.
 
 %==============================================================================
 
