@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.c']]]
+  ['hide_5fcursor_0',['hide_cursor',['../pbar_8c.html#a0a182a1700bc7b3963c3e73a62499fa9',1,'hide_cursor(void):&#160;pbar.c'],['../pbar_8h.html#a0a182a1700bc7b3963c3e73a62499fa9',1,'hide_cursor(void):&#160;pbar.c']]]
 ];

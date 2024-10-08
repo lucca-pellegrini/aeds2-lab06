@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['sort_5ffunc_5ft_0',['sort_func_t',['../quicksort_8h.html#a795621704f7a72cc4639b0e9c2e95328',1,'quicksort.h']]],
-  ['strat_5fto_5fstr_1',['strat_to_str',['../util_8c.html#a250a8f9dea131e0f8b61f06cb5a8943b',1,'strat_to_str(PivotStrategy s):&#160;util.c'],['../util_8h.html#a250a8f9dea131e0f8b61f06cb5a8943b',1,'strat_to_str(PivotStrategy s):&#160;util.c']]],
-  ['strats_2',['strats',['../main_8c.html#a783b903dd53a311d57b9bad04f47e469',1,'main.c']]],
-  ['swap_3',['swap',['../util_8c.html#ae4b79359283c5360c156aff9e3584a22',1,'swap(int *arr, size_t a, size_t b):&#160;util.c'],['../util_8h.html#ae4b79359283c5360c156aff9e3584a22',1,'swap(int *arr, size_t a, size_t b):&#160;util.c']]]
+  ['rand_5fis_5fseeded_0',['rand_is_seeded',['../quicksort_8c.html#ac676cfcf683f80d4e7a742edc3eccc5c',1,'rand_is_seeded:&#160;quicksort.c'],['../vec_8c.html#ac676cfcf683f80d4e7a742edc3eccc5c',1,'rand_is_seeded:&#160;vec.c']]]
 ];

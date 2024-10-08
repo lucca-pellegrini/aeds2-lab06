@@ -1,11 +1,16 @@
 var searchData=
 [
-  ['quicksort_0',['quicksort',['../quicksort_8c.html#a0d8a3eb6aac7c86cbc3acae9d625ff8c',1,'quicksort(int *vec, size_t n, PivotStrategy strat):&#160;quicksort.c'],['../quicksort_8h.html#a0ad5ffc777607448d652cf3a9ff26a37',1,'quicksort(int *vec, size_t n, enum PivotStrategy strat):&#160;quicksort.c']]],
-  ['quicksort_2ec_1',['quicksort.c',['../quicksort_8c.html',1,'']]],
-  ['quicksort_2eh_2',['quicksort.h',['../quicksort_8h.html',1,'']]],
-  ['quicksort_5fpivot_5ffirst_3',['quicksort_pivot_first',['../quicksort_8c.html#a1f7a6d6a10f058b79846635350caa433',1,'quicksort_pivot_first(int *vec, size_t n):&#160;quicksort.c'],['../quicksort_8h.html#a1f7a6d6a10f058b79846635350caa433',1,'quicksort_pivot_first(int *vec, size_t n):&#160;quicksort.c']]],
-  ['quicksort_5fpivot_5flast_4',['quicksort_pivot_last',['../quicksort_8c.html#acdf732ec15baee23a552817e64b93d2e',1,'quicksort_pivot_last(int *vec, size_t n):&#160;quicksort.c'],['../quicksort_8h.html#acdf732ec15baee23a552817e64b93d2e',1,'quicksort_pivot_last(int *vec, size_t n):&#160;quicksort.c']]],
-  ['quicksort_5fpivot_5fmedian_5',['quicksort_pivot_median',['../quicksort_8c.html#a6e5190e6af93a17d2abcd978fbf5ed82',1,'quicksort_pivot_median(int *vec, size_t n):&#160;quicksort.c'],['../quicksort_8h.html#a6e5190e6af93a17d2abcd978fbf5ed82',1,'quicksort_pivot_median(int *vec, size_t n):&#160;quicksort.c']]],
-  ['quicksort_5fpivot_5frand_6',['quicksort_pivot_rand',['../quicksort_8c.html#a8dd79776dd7bd8f0a38199c2c8edabd2',1,'quicksort_pivot_rand(int *vec, size_t n):&#160;quicksort.c'],['../quicksort_8h.html#a8dd79776dd7bd8f0a38199c2c8edabd2',1,'quicksort_pivot_rand(int *vec, size_t n):&#160;quicksort.c']]],
-  ['quicksort_5frec_7',['quicksort_rec',['../quicksort_8c.html#a395d838cf881500127417422f40ddf8e',1,'quicksort.c']]]
+  ['pbar_2ec_0',['pbar.c',['../pbar_8c.html',1,'']]],
+  ['pbar_2eh_1',['pbar.h',['../pbar_8h.html',1,'']]],
+  ['pivot_5ffirst_2',['pivot_first',['../quicksort_8c.html#a7b1ec69642a6ca01b26fba7658d8246a',1,'quicksort.c']]],
+  ['pivot_5ffirst_3',['PIVOT_FIRST',['../quicksort_8h.html#a001800b53b776b368a84dc646ee6499dacc7bb67d1437c1c948ebff80f5f300d2',1,'quicksort.h']]],
+  ['pivot_5ffunc_5ft_4',['pivot_func_t',['../quicksort_8c.html#a4494f691eabe23cd9115159893d40f7f',1,'quicksort.c']]],
+  ['pivot_5flast_5',['pivot_last',['../quicksort_8c.html#a9fbcbce3942183559af6ffb59fce0b7c',1,'quicksort.c']]],
+  ['pivot_5flast_6',['PIVOT_LAST',['../quicksort_8h.html#a001800b53b776b368a84dc646ee6499da9ef3aadae857cece6b78f984f57dd75f',1,'quicksort.h']]],
+  ['pivot_5fmedian_7',['pivot_median',['../quicksort_8c.html#a4db9f4bbab6936b963636828b812f911',1,'pivot_median(int *vec, size_t esq, size_t dir):&#160;quicksort.c'],['../quicksort_8c.html#a15e977a1e66baee1e0d5747fa14af78c',1,'pivot_median(int *restrict vec, size_t esq, size_t dir):&#160;quicksort.c']]],
+  ['pivot_5fmedian_8',['PIVOT_MEDIAN',['../quicksort_8h.html#a001800b53b776b368a84dc646ee6499da5278e6a9e80f11ba31e46dd0e67de9c2',1,'quicksort.h']]],
+  ['pivot_5frand_9',['pivot_rand',['../quicksort_8c.html#a321af9a5a23b6cb9fb12c7002b7bee76',1,'quicksort.c']]],
+  ['pivot_5frand_10',['PIVOT_RAND',['../quicksort_8h.html#a001800b53b776b368a84dc646ee6499dace0f24b68f0e1baf16784d5e271b27c9',1,'quicksort.h']]],
+  ['pivotstrategy_11',['PivotStrategy',['../quicksort_8h.html#a001800b53b776b368a84dc646ee6499d',1,'PivotStrategy:&#160;quicksort.h'],['../quicksort_8h.html#a06cb5b6cd2051ddab0936e30edf44525',1,'PivotStrategy:&#160;quicksort.h']]],
+  ['progress_5fbar_12',['progress_bar',['../pbar_8c.html#a2325fc29f9611f90d4ea27797b868867',1,'progress_bar(unsigned current, unsigned total):&#160;pbar.c'],['../pbar_8h.html#a2325fc29f9611f90d4ea27797b868867',1,'progress_bar(unsigned current, unsigned total):&#160;pbar.c']]]
 ];
